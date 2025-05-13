@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sammy Murumwa</title>
+  <title>Dr. Sultani Matendechero 'ndc'(K)</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,7 +27,355 @@
   <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  
+  <style>
+    /* Portfolio styles */
+    .portfolio-wrap {
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background: rgba(69, 80, 91, 0.8);
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .portfolio-wrap::before {
+      content: "";
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      top: 30px;
+      bottom: 30px;
+      transition: all ease-in-out 0.3s;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .portfolio-wrap img {
+      transition: 0.3s;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .portfolio-wrap .portfolio-info {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links {
+      opacity: 1;
+      left: 0;
+      right: 0;
+      bottom: -60px;
+      z-index: 3;
+      position: absolute;
+      transition: all ease-in-out 0.3s;
+      display: flex;
+      justify-content: center;
+    }
+
+    .portfolio .portfolio-wrap {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      transform-origin: center;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .portfolio .portfolio-wrap:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 30px rgba(5, 99, 187, 0.1);
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links .play-btn {
+      display: flex;
+      align-items: center;
+      background: #0563bb;
+      padding: 12px 25px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 16px;
+      width: fit-content;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links .play-btn:hover {
+      background: #0452a0;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .portfolio .portfolio-wrap .portfolio-info .badge {
+      background: #e7f1ff;
+      color: #0563bb;
+      font-weight: 500;
+      font-size: 13px;
+      padding: 5px 10px;
+      margin-right: 5px;
+      border-radius: 4px;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links .play-btn i {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links .play-btn span {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-info h4 {
+      font-size: 24px;
+      color: #45505b;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-info p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-wrap .portfolio-info p {
+      color: #45505b;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .portfolio-wrap:hover::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+    }
+
+    .portfolio-wrap:hover .portfolio-info {
+      opacity: 1;
+    }
+
+    .portfolio-wrap:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Testimonials styles */
+    .testimonials .testimonial-item {
+      box-sizing: content-box;
+      padding: 30px;
+      margin: 30px 15px;
+      min-height: 200px;
+      box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+      background: #fff;
+      border-radius: 15px;
+    }
+
+    .testimonials .testimonial-item .testimonial-img {
+      width: 90px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      float: left;
+      margin: 0 10px 0 0;
+    }
+
+    .testimonials .testimonial-item h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+      color: #111;
+    }
+
+    .testimonials .testimonial-item h4 {
+      font-size: 14px;
+      color: #999;
+      margin: 0;
+    }
+
+    .testimonials .testimonial-item p {
+      font-style: italic;
+      margin: 15px auto 15px auto;
+    }
+
+    .testimonials .testimonial-item .quote-icon-left,
+    .testimonials .testimonial-item .quote-icon-right {
+      color: #0563bb;
+      font-size: 26px;
+      line-height: 0;
+    }
+
+    .testimonials .testimonial-item .quote-icon-left {
+      display: inline-block;
+      left: -5px;
+      position: relative;
+    }
+
+    .testimonials .testimonial-item .quote-icon-right {
+      display: inline-block;
+      right: -5px;
+      position: relative;
+      top: 10px;
+      transform: rotate(180deg);
+    }
+
+    .testimonials .testimonial-item small {
+      color: #999;
+      display: block;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .testimonials .swiper-pagination {
+      margin-top: 20px;
+      position: relative;
+    }
+
+    .testimonials .swiper-pagination .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #fff;
+      opacity: 1;
+      border: 1px solid #0563bb;
+    }
+
+    .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: #0563bb;
+    }
+
+    /* Video section styles */
+    .video-section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .video-caption {
+      color: #272829;
+    }
+
+    .video-caption h4 {
+      color: #173b6c;
+      font-weight: 600;
+    }
+
+    .video-caption p {
+      margin-bottom: 0.5rem;
+      font-size: 15px;
+    }
+
+    .video-caption .badge {
+      font-weight: 500;
+      font-size: 13px;
+      padding: 5px 10px;
+      background-color: #0563bb !important;
+      transition: all 0.3s ease;
+    }
+
+    .video-caption .badge:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    /* Facts styles */
+    .facts {
+      padding-bottom: 30px;
+    }
+
+    .facts .count-box {
+      padding: 30px;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .facts .count-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .facts .count-box i {
+      display: block;
+      font-size: 44px;
+      color: #0563bb;
+      float: left;
+      line-height: 0;
+      margin-right: 20px;
+    }
+
+    .facts .count-box span {
+      font-size: 48px;
+      line-height: 40px;
+      display: block;
+      font-weight: 700;
+      color: #1e1e1e;
+      margin-left: 60px;
+    }
+
+    .facts .count-box p {
+      padding: 15px 0 0 0;
+      margin: 0 0 0 60px;
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      color: #122f57;
+    }
+
+    /* Skills styles */
+    .skills-content h4 {
+      color: #173b6c;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .skill-item {
+      margin-bottom: 20px;
+    }
+    .skill-name {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .skill-name small {
+      font-weight: normal;
+      color: #666;
+      margin-left: 5px;
+    }
+    .progress {
+      height: 10px;
+      background-color: #dce8f8;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      background-color: #149ddd;
+      transition: width 0.6s ease;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,13 +388,11 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Sammy Murumwa</a></h1>
+        <img src="assets/img/dr sultani1.jpeg" alt="Dr. Sultani Matendechero" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Dr. Sultani Matendechero</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://x.com/sam_murumwa?t=rltla-Nuy8eU3OKi7vNN4w&s=08" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/share/1AS269uvBV/?mibextid=qi2Omg" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/__muruh_?utm_source=qr&igsh=ZjRwY2s4d2Y4aWVy" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/sammy-murumwa-84164b196/?originalSubdomain=ke" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/dr-sultani-matendechero-%E2%80%98ndc%E2%80%99-k-9285a419/" class="linkedin" target="_blank" title="LinkedIn Profile"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://x.com/matendechero" class="twitter" target="_blank" title="Twitter/X Profile"><i class="bx bxl-twitter"></i></a>
         </div>
       </div>
 
@@ -63,10 +409,10 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background: url('assets/img/sasaka2.jpeg') top center; background-size: cover;">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background: url('assets/img/dr sultani2.jpg') top center; background-size: cover;">
     <div class="hero-container" data-aos="fade-in" style="background: rgba(0, 0, 0, 0.7); padding: 20px; border-radius: 10px;">
-      <h1>Sammy Murumwa</h1>
-      <p>I'm a <span class="typed" data-typed-items="Program Officer, Health Systems Manager, Data Analyst"></span></p>
+      <h1>Dr. Sultani Matendechero 'ndc'(K)</h1>
+      <p>I'm a <span class="typed" data-typed-items="Senior Deputy Director at Ministry of Health, Public Health Expert, Health Policy Specialist"></span></p>
     </div>
   </section>
 
@@ -78,41 +424,38 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>At the forefront of enhancing Kenya's public health sector, I work with the Ministry of Health to deploy evidence-based strategies to improve community health outcomes. With a focus on policy implementation and collaborating with various stakeholders, I work diligently to strengthen health systems and ensure sustainable healthcare solutions. Pursuing a Masters in Health Systems Management, I apply academic insights to real-world challenges, fostering capacity building and data-driven program assessment. Leveraging skills in data analysis and visualization, our team has made significant strides in designing and executing impactful health initiatives that resonate with community needs.</p>
+          <p>As the Senior Deputy Director General for Public Health and Professional Standards at Kenya's Ministry of Health, I lead strategic initiatives to strengthen our national healthcare system and elevate professional standards across the sector. With over two decades of experience in public health leadership, I've spearheaded numerous successful programs in disease control and health system strengthening. My expertise in Vector-Borne and Neglected Tropical Diseases has been instrumental in developing comprehensive strategies for disease elimination and control. Through evidence-based approaches and strong partnerships, we continue to make significant progress in improving healthcare accessibility and quality for all Kenyans.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/dr sultani3.jpeg" class="img-fluid" alt="Dr. Sultani Matendechero speaking at a conference">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Program Officer | Community Health Programs</h3>
+            <h3>Served as Head of Division | Vector-Borne and Neglected Tropical Diseases</h3>
             <p class="fst-italic">
-                Dedicated healthcare professional with expertise in community health programs, policy implementation, health systems management, and data analytics. Passionate about improving public health outcomes through evidence-based interventions and community-driven solutions.
+              A consultant clinical pharmacist and public health expert leading national efforts to eliminate neglected tropical diseases in Kenya.
             </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>5+ years in Healthcare</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>https://sammymurumwa.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+254715802108</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Nairobi, Kenya</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Position:</strong> <span>Senior Deputy Director Ministry of Health </span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>15+ years in Public Health</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Expertise:</strong> <span>Clinical Pharmacy, NTDs</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Masters in Health Systems Management</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sammymurumwa08@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Role:</strong> <span>Program Officer</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Education:</strong> <span>MPharm, Clinical Pharmacy</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Leadership:</strong> <span>Chair, African NTD Program Managers</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Focus:</strong> <span>Disease Elimination Strategies</span></li>
                 </ul>
               </div>
             </div>
             <p>
-              As a dedicated healthcare professional with extensive experience in community health programs, I have successfully implemented and managed various public health initiatives across Kenya. My work focuses on strengthening healthcare systems, improving community access to essential health services, and developing sustainable health programs that address local needs.
+            Having served  as the Head of the Division of Vector-Borne and Neglected Tropical Diseases at Kenya's Ministry of Health, I led national efforts to eliminate debilitating diseases that affect millions of Kenyans. I serve as the chairperson of the African Neglected Tropical Diseases Program Managers' Community of Practice and the Leishmaniasis East Africa Platform.
 
-              I have demonstrated expertise in health systems management, data analysis, and program monitoring & evaluation. Working closely with community health workers, local authorities, and international health organizations, I've helped establish effective healthcare delivery mechanisms and improved health outcomes in underserved communities.
-              
-              I am passionate about evidence-based healthcare interventions and using data-driven approaches to enhance public health programs. My experience in both clinical practice and program management has equipped me with a comprehensive understanding of healthcare challenges and innovative solutions to address them effectively.
+              My work focused on developing evidence-based strategies, implementing targeted interventions, and building sustainable epidemiological capacity to combat neglected tropical diseases. Through partnerships and innovative approaches, we made significant strides in disease surveillance, prevention, and elimination across Kenya.
             </p>
           </div>
         </div>
@@ -120,28 +463,220 @@
       </div>
     </section>
 
-    
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>A visual journey through Dr. Sultani's professional endeavors and contributions to public health in Kenya</p>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani3.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Public Health Leadership</h4>
+                <p>Leading discussions on health policy and strategy</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani4.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>International Collaboration</h4>
+                <p>Working with global health partners</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani5.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Community Engagement</h4>
+                <p>Addressing public health challenges at the community level</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani6.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Strategic Planning</h4>
+                <p>Developing comprehensive health strategies</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani7.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Health Systems Strengthening</h4>
+                <p>Building robust healthcare infrastructure</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani8.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Professional Development</h4>
+                <p>Continuous learning and expertise sharing</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani9.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Policy Implementation</h4>
+                <p>Ensuring effective health policy execution</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani10.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Healthcare Innovation</h4>
+                <p>Advancing modern healthcare solutions</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 portfolio-item filter-leadership">
+            <div class="portfolio-wrap">
+              <img src="assets/img/dr sultani12.png" class="img-fluid" alt="Dr. Sultani speaking at a public health conference">
+              <div class="portfolio-links">
+                <a href="assets/img/dr sultani12.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Dr. Sultani addressing key public health challenges and strategies for disease control"><i class="bx bx-plus"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Recommendations</h2>
+          <p>Professional endorsements and testimonials from colleagues and clients</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Dr. Sultani's leadership in the fight against Neglected Tropical Diseases has been transformative. His evidence-based approach and dedication to public health have significantly improved healthcare outcomes across Kenya.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Dr. John Githure</h3>
+                <h4>Public Health Specialist</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Working with Dr. Matendechero has been inspiring. His commitment to eliminating vector-borne diseases and his strategic approach to public health challenges have set new standards in the field.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Dr. Rebecca Willis</h3>
+                <h4>WHO Technical Advisor</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Dr. Sultani's expertise in clinical pharmacy and public health has been instrumental in developing comprehensive disease control programs. His leadership continues to make a lasting impact on community health.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Prof. Charles Mbogo</h3>
+                <h4>Research Director, KEMRI</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Dr. Matendechero's contributions to public health in Kenya are remarkable. His innovative approaches to disease surveillance and control have become a model for other African nations.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Dr. Alice Mwangi</h3>
+                <h4>Director of Public Health Programs</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
     <section id="facts" class="facts">
       <div class="container">
 
         <div class="section-title">
-          <h2>Facts</h2>
-          <p>Learning and picking up fast is very Important to me.</p>
+          <h2>Impact & Achievements</h2>
+          <p>Making significant strides in public health and disease elimination across Kenya</p>
         </div>
 
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-           
+              <i class="bi bi-award"></i>
+              <span>15+</span>
+              <p>Years of Experience in Public Health</p>
             </div>
           </div>
 
-          
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-medical"></i>
+              <span>47</span>
+              <p>Counties Covered in Disease Surveillance</p>
+            </div>
           </div>
 
-        
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span>1M+</span>
+              <p>Lives Impacted Through Health Programs</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-diagram-3"></i>
+              <span>25+</span>
+              <p>International Health Partnerships</p>
+            </div>
           </div>
 
         </div>
@@ -158,26 +693,143 @@
           <p>Technical skills gurnered in the event of exposure to the technical space </p>
         </div>
 
-        <div class="row skills-content">
-          <!-- Column 1 -->
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="progress"><span class="skill">Health Systems Management <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Community Health Programs <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Policy Implementation <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Data Analysis <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Python <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Tableau <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Healthcare Administration <i class="val"></i></span></div>
+        <div class="skills-content">
+          <!-- Healthcare & Public Health -->
+          <h4 class="mt-4">Healthcare & Public Health</h4>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Healthcare <small>(73 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Public Health <small>(30 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Health Policy</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Medicine <small>(5 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Healthcare Improvement</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
-        
-          <!-- Column 2 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="progress"><span class="skill">Monitoring & Evaluation <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Capacity Building <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Stakeholder Engagement <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Healthcare Quality Improvement <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Clinical Care <i class="val"></i></span></div>
-            <div class="progress"><span class="skill">Public Health Research <i class="val"></i></span></div>
+
+          <!-- Pharmacy Expertise -->
+          <h4 class="mt-4">Pharmacy Expertise</h4>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Pharmacists <small>(43 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Clinical Pharmacy <small>(16 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Clinical Research <small>(35 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Pharmaceutical Care <small>(4 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leadership & Management -->
+          <h4 class="mt-4">Leadership & Management</h4>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Strategic Planning <small>(3 endorsements)</small></span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Program Development</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Team Leadership</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Strategic Thinking</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Skills -->
+          <h4 class="mt-4">Professional Skills</h4>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Research Skills</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Analytical Skills</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <span class="skill-name">Public Speaking</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Negotiation</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -201,75 +853,67 @@
           <div class="col-lg-6" data-aos="fade-up">
             <h3 class="resume-title">Education</h3>
             <div class="resume-item pb-0">
-              <h4>Kenya Methodist University</h4>
-              <p><em>Currently pursuing a Masters in Health Systems Management, focusing on improving healthcare efficiency and patient-centered care through evidence-based strategies and data-driven decision making.</em></p>
-              <ul>
-                <li>Jan 2023 - Dec 2025</li>
-                <li>Specialization in Health Systems Management</li>
-                <li>Research focus on healthcare quality improvement</li>
-              </ul>
+              <h4>Master of Pharmacy (MPharm) - Clinical Pharmacy</h4>
+              <h5>2010 - 2019</h5>
+              <p><em>University of Nairobi</em></p>
+              <p>Specialized in Clinical Pharmacy with focus on Infectious Diseases and Mental Health. Developed expertise in medical research and healthcare systems.</p>
             </div>
 
-            <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>Moringa School</h4>
-              <h5>Jun 2024 - Dec 2024</h5>
-              <p><em>Data Visualization and Data Analysis</em></p>
-              <p>Specialized training in data analytics and visualization tools</p>
+              <h4>Master of Arts (MA) - International Studies</h4>
+              <h5>2020 - 2021</h5>
+              <p><em>University of Nairobi</em></p>
+              <p>Focused on Diplomacy and International Studies, enhancing expertise in global health policy and international cooperation.</p>
             </div>
-            <h3 class="resume-title">Certifications</h3>
+
             <div class="resume-item">
-              <h4>Advanced Cardiovascular Life Support (ACLS)</h4>
-              <h5>July 2022</h5>
-              <p><em>American Heart Association</em></p>
-              <p>Experienced Provider Certification</p>
+              <h4>NDC (K) Course - National Security and Strategy</h4>
+              <h5>2020 - 2021</h5>
+              <p><em>National Defence College (NDC)</em></p>
+              <p>Advanced training in national security and strategy, developing crucial skills in strategic thinking and public policy.</p>
             </div>
+
             <div class="resume-item">
-              <h4>Basic Life Support (BLS)</h4>
-              <h5>June 2022</h5>
-              <p><em>American Heart Association</em></p>
-              <p>Healthcare Provider Certification</p>
-            </div>
-            <div class="resume-item">
-              <h4>Data Visualization and Analysis</h4>
-              <h5>Jun 2024 - Dec 2024</h5>
-              <p><em>Moringa School</em></p>
-              <p>Specialized in Python and Tableau for healthcare data analytics</p>
+              <h4>Bachelor of Pharmacy (BPharm)</h4>
+              <h5>2000 - 2004</h5>
+              <p><em>University of Nairobi</em></p>
+              <p>Foundation in pharmaceutical sciences and healthcare, with strong focus on research and analytical skills.</p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Ministry of Health, Kenya</h4>
-              <h5>Jan 2025 - Present</h5>
-              <p><em>Program Officer - Community Health Programs</em></p>
+              <h4>Senior Deputy Director</h4>
+              <h5>Aug 2024 - Present</h5>
+              <p><em>Ministry of Health, Kenya - Nairobi</em></p>
               <ul>
-                <li>Design, execute, and evaluate community health initiatives using evidence-based strategies</li>
-                <li>Lead monitoring & evaluation efforts using data-driven insights to assess program impact</li>
-                <li>Train and empower community health workers through capacity building programs</li>
+                <li>Leading policy development and implementation in public health</li>
+                <li>Providing technical assistance and capacity building in health systems</li>
+                <li>Coordinating disease control and elimination programs</li>
+                <li>Overseeing public health emergency preparedness and response initiatives</li>
               </ul>
             </div>
+
             <div class="resume-item">
-              <h4>Kerugoya County Hospital</h4>
-              <h5>Aug 2022 - Aug 2023</h5>
-              <p><em>Nursing Officer - Internship</em></p>
+              <h4>Director General</h4>
+              <h5>Jul 2021 - Sep 2022</h5>
+              <p><em>Kenya National Public Health Institute - Nairobi, Kenya</em></p>
               <ul>
-                <li>Diagnosed common health conditions and recommended necessary interventions</li>
-                <li>Provided holistic care through risk identification and assessment</li>
-                <li>Created and maintained safe nursing care environments</li>
-                <li>Collaborated with interdisciplinary teams to support patients</li>
-                <li>Conducted community health risk assessments and provided interventions</li>
+                <li>Led and coordinated public health functions and disease surveillance</li>
+                <li>Managed public health emergency preparedness and response</li>
+                <li>Directed public health workforce development programs</li>
+                <li>Supervised research initiatives in public health</li>
               </ul>
             </div>
+
             <div class="resume-item">
-              <h4>Moi Teaching and Referral Hospital</h4>
-              <h5>Oct 2017 - Dec 2022</h5>
-              <p><em>Student Nurse</em></p>
+              <h4>Vice Chair and Bureau Member of the WGIHR</h4>
+              <h5>Nov 2022 - Jun 2024</h5>
+              <p><em>World Health Organization - Geneva and Nairobi</em></p>
               <ul>
-                <li>Reviewed care plans and assessed alignment with care goals</li>
-                <li>Monitored patients and documented status changes</li>
-                <li>Participated in quality improvement procedures</li>
-                <li>Provided health education and counseling</li>
+                <li>Contributed to International Health Regulations and Global Health Security</li>
+                <li>Oversaw disease surveillance and public health emergency preparedness</li>
+                <li>Developed strategic policies for international health cooperation</li>
               </ul>
             </div>
           </div>
@@ -289,64 +933,63 @@
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-research">Research</li>
-              <li data-filter=".filter-data">Data Analysis</li>
-              <li data-filter=".filter-health">Healthcare</li>
+              <li data-filter="*" class="filter-active">All Research</li>
+              <li data-filter=".filter-policy">Healthcare Policy</li>
+              <li data-filter=".filter-ntd">NTD Research</li>
+              <li data-filter=".filter-leadership">Leadership</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-6 col-md-6 portfolio-item filter-research">
+          <div class="col-lg-6 col-md-6 portfolio-item filter-policy" data-aos="zoom-in" data-aos-delay="200">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/graduation.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="#" title="Research on Family Planning Methods"><i class="bx bx-link"></i></a>
+                <a href="https://www.youtube.com/watch?v=PsfGTu0Vi6A" target="_blank" title="Watch Policy Discussion" class="play-btn">
+                  <i class="bx bx-play-circle"></i>
+                  <span>Watch Discussion</span>
+                </a>
               </div>
               <div class="portfolio-info">
-                <h4>Family Planning Research</h4>
-                <p>Factors influencing preference of family planning methods in females of reproductive age at MTRH</p>
+                <h4>Universal Healthcare Access in Kenya</h4>
+                <p>"Hata kama unaishi kwa streets, utapata huduma ya afya ya hali ya juu."</p>
+                <p>Je unafamu tofauti kati ya SHIF na SHA?</p>
+                <div class="tags mt-2">
+                  <span class="badge">#tatusure</span>
+                  <span class="badge">#maishaasubuhi</span>
+                  <span class="badge">#bungelamaisha</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 portfolio-item filter-data">
+          <div class="col-lg-6 col-md-6 portfolio-item filter-ntd" data-aos="zoom-in" data-aos-delay="300">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/hero.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="https://public.tableau.com/app/profile/sammy.murumwa/viz/Crop-Performance-Analysis-in-Karamoja/Dashboard2" title="View Dashboard"><i class="bx bx-link"></i></a>
+                <a href="https://www.youtube.com/watch?v=5059_WkU1yE" target="_blank" title="Watch Research Presentation" class="play-btn">
+                  <i class="bx bx-play-circle"></i>
+                  <span>Watch Research</span>
+                </a>
               </div>
               <div class="portfolio-info">
-                <h4>Karamoja Food Security Dashboard</h4>
-                <p>Data visualization of crop yields and food security trends in Karamoja, Uganda</p>
+                <h4>Pediatric Schistosomiasis Treatment</h4>
+                <p>Research presentation on developing child-friendly medication with GHIT Fund and Pediatric Praziquantel Consortium</p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 portfolio-item filter-health">
+          <div class="col-lg-6 col-md-6 portfolio-item filter-leadership">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/sammy.jpeg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="#" title="Community Health Programs"><i class="bx bx-link"></i></a>
+                <a href="https://www.youtube.com/watch?v=VFbLm9RA_XY" target="_blank" title="Watch Interview" class="play-btn">
+                  <i class="bx bx-play-circle"></i>
+                  <span>Watch Interview</span>
+                </a>
               </div>
               <div class="portfolio-info">
-                <h4>Community Health Initiatives</h4>
-                <p>Leading community health programs and policy implementation in Kenya</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-6 portfolio-item filter-data">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/sasaka.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="#" title="Data-Driven Healthcare"><i class="bx bx-link"></i></a>
-              </div>
-              <div class="portfolio-info">
-                <h4>Data-Driven Healthcare</h4>
-                <p>Passionate about leveraging data analytics to drive informed healthcare decisions and improve community health outcomes</p>
+                <h4>Public Health Leadership</h4>
+                <p>Discussion on Kenya's public health initiatives and disease control strategies on The Situation Room</p>
               </div>
             </div>
           </div>
@@ -358,33 +1001,85 @@
 
      
 
-    <!--  Testimonials Section -->
-    <section id="testimonials" class="testimonials section-bg">
+    <!-- Publications & Research Section -->
+    <section id="publications" class="publications section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
-          <p></p>
+          <h2>Publications & Research</h2>
+          <p>Recent academic contributions and research papers in public health and tropical diseases</p>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Sammy is an exceptional healthcare professional and dedicated colleague. His expertise in clinical practice, healthcare administration, and public health leadership has left a lasting impression. His unwavering commitment to excellence and ability to inspire those around him makes him a trusted and respected figure among colleagues and patients alike.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>OKWEMBA F. ALIELI</h3>
-                <h4>Healthcare Professional</h4>
+        <div class="row">
+          <div class="col-lg-12 mb-5">
+            <div class="video-section">
+              <div class="video-caption mb-4">
+                <h4 class="mb-3">Guest: Dr. Sultani Matendechero - Senior Deputy Director, Ministry of Health</h4>
+                <p class="mb-2"><strong>This Is The Situation Room, Kenya's Biggest Conversation</strong></p>
+                <p class="mb-1"><strong>Hosts:</strong> Ndu Okoh, CT Muga & Ankey Dorice Ombat</p>
+                <p class="mb-1"><strong>Producers:</strong> Lydiah Maina & Ednah Ombaso</p>
+                <p><strong>Digital:</strong> Asha Wairimu & Okello Tracy</p>
+              </div>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/VFbLm9RA_XY" title="Dr. Sultani Matendechero on The Situation Room" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
-
           </div>
-          <div class="swiper-pagination"></div>
+
+          <div class="col-lg-12 mb-5">
+            <div class="video-section">
+              <div class="video-caption mb-4">
+                <h4 class="mb-3">Addressing maternal mortality in Africa: Insights from the 2nd Africa Women's Health Symposium</h4>
+                <p class="mb-2">Dr. Sultani Hadley Matendechero, the deputy director general for health, Ministry of Health, Kenya, shares his insights on the issue of maternal health in Africa.</p>
+              </div>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/1juPHO2k9Xg" title="Dr. Sultani Matendechero on Maternal Health in Africa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-5">
+            <div class="video-section">
+              <div class="video-caption mb-4">
+                <h4 class="mb-3">Fighting Schistosomiasis: A Focus on Preschool-Aged Children</h4>
+                <p class="mb-2">Schistosomiasis is one of the neglected tropical diseases. While it can be safely and effectively treated in school-aged children and adults, an estimated 50 million preschool-aged children have been left untreated in public health programs primarily due to the lack of an appropriate child-friendly medication.</p>
+                <p class="mb-2">GHIT Fund has supported and invested in the Pediatric Praziquantel Consortium's development of a new treatment for preschool-aged children since 2013.</p>
+                <p class="mb-2">We will be releasing videos of interviews with Pediatric Praziquantel Consortium's partners, Merck and Astellas Pharma, and then with Ministries of Health from African countries about the fight against schistosomiasis.</p>
+                <p>We interviewed Dr. Sultani Matendechero, Deputy Director General for Health in Kenya, about the current situation and future issues of #schistosomiasis, which has a serious impact on preschool children.</p>
+              </div>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/5059_WkU1yE" title="Dr. Sultani Matendechero on Schistosomiasis Treatment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-5">
+            <div class="video-section">
+              <div class="video-caption mb-4">
+                <h4 class="mb-3">Universal Healthcare Access in Kenya</h4>
+                <p class="mb-2">Dr. Sultani Matendechero: "Hata kama unaishi kwa streets, utapata huduma ya afya ya hali ya juu."</p>
+                <p>Je unafamu tofauti kati ya SHIF na SHA?</p>
+                <p class="mt-2">
+                  <span class="badge bg-primary me-2">#tatusure</span>
+                  <span class="badge bg-primary me-2">#maishaasubuhi</span>
+                  <span class="badge bg-primary">#bungelamaisha</span>
+                </p>
+              </div>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/PsfGTu0Vi6A" title="Dr. Sultani Matendechero on Universal Healthcare Access" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="publication-placeholder text-center py-5">
+              <i class="bi bi-journal-medical display-1 text-muted"></i>
+              <h4 class="mt-3 text-muted">More Publications Coming Soon</h4>
+              <p class="text-muted">This section will be updated with Dr. Sultani's research papers and publications.</p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -412,16 +1107,17 @@
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>sammymurumwa08@gmail.com</p>
+                <p><a href="mailto:deputydg.publichealth@health.go.ke">deputydg.publichealth@health.go.ke</a><br>
+                <a href="mailto:hadleysultani@gmail.com">hadleysultani@gmail.com</a></p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+254715802108</p>
+                <h4>WhatsApp:</h4>
+                <p><a href="https://wa.me/254722652491" target="_blank">+254 722 652 491</a></p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8176600804837!2d36.88741937462385!3d-1.2198397987421781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f5d0c71c8ab%3A0x71c0d96a2a06c88d!2sLumumba%20Dr%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1699787654321!5m2!1sen!2ske" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.818185071565!2d36.81303827466791!3d-1.2975794356149754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10e9eac7b825%3A0x1b9384e97bd5a56c!2sAfya%20House!5e0!3m2!1sen!2ske!4v1683840331689!5m2!1sen!2ske" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
@@ -429,19 +1125,14 @@
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <div class="contact-methods w-100">
               <div class="row mb-4">
-                <div class="col-md-6">
-                  <a href="https://wa.me/254715802108" target="_blank" class="btn btn-success w-100" style="background-color: #25D366; border-color: #25D366;">
-                    <i class="bi bi-whatsapp"></i> Contact via WhatsApp
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <a href="sms:+254715802108" class="btn btn-primary w-100">
-                    <i class="bi bi-chat-dots"></i> Send SMS
+                <div class="col-md-12">
+                  <a href="https://www.linkedin.com/in/dr-sultani-matendechero-ndc-k-5918-followers/" target="_blank" class="btn btn-primary w-100">
+                    <i class="bi bi-linkedin"></i> Connect on LinkedIn
                   </a>
                 </div>
               </div>
               
-              <form id="contactForm" onsubmit="return handleSubmit(event)" class="contact-form">
+              <form id="contactForm" class="contact-form" onsubmit="return handleMessageSubmit(event)">
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="name">Your Name</label>
@@ -452,20 +1143,37 @@
                     <input type="email" class="form-control" name="email" id="email" required>
                   </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-3">
                   <label for="subject">Subject</label>
                   <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-3">
                   <label for="message">Message</label>
-                  <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                  <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
                 </div>
-                <div class="text-center mt-3">
-                  <button type="submit" class="btn btn-success" style="background-color: #25D366; border-color: #25D366;">
-                    <i class="bi bi-whatsapp"></i> Send via WhatsApp
-                  </button>
+                <div class="text-center mt-4">
+                  <div class="btn-group w-100" role="group">
+                    <button type="button" onclick="sendViaWhatsApp()" class="btn btn-success" style="background-color: #25D366; border-color: #25D366;">
+                      <i class="bi bi-whatsapp"></i> WhatsApp
+                    </button>
+                    <button type="button" onclick="sendViaSMS()" class="btn btn-primary">
+                      <i class="bi bi-chat-text"></i> SMS
+                    </button>
+                    <button type="button" onclick="sendViaEmail()" class="btn btn-info">
+                      <i class="bi bi-envelope"></i> Email
+                    </button>
+                  </div>
                 </div>
               </form>
+
+              <div class="social-links mt-4 text-center">
+                <a href="https://www.linkedin.com/in/dr-sultani-matendechero-%E2%80%98ndc%E2%80%99-k-9285a419/" target="_blank" class="linkedin" title="Connect on LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://x.com/matendechero" target="_blank" class="twitter" title="Follow on X (Twitter)">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -480,7 +1188,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Sammy Murumwa</span></strong>
+        &copy; Copyright <strong><span>Dr. Sultani Matendechero</span></strong>
       </div>
       <div class="credits">
         
@@ -505,18 +1213,33 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    function handleSubmit(event) {
+    function handleMessageSubmit(event) {
       event.preventDefault();
+      return false;
+    }
+
+    function formatMessage() {
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;i 
-      
-      const whatsappMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage: ${message}`;
-      const encodedMessage = encodeURIComponent(whatsappMessage);
-      
-      window.open(`https://wa.me/254715802108?text=${encodedMessage}`, '_blank');
-      return false;
+      const message = document.getElementById('message').value;
+      return `From: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
+    }
+
+    function sendViaWhatsApp() {
+      const formattedMessage = encodeURIComponent(formatMessage());
+      window.open(`https://wa.me/254722652491?text=${formattedMessage}`, '_blank');
+    }
+
+    function sendViaSMS() {
+      const formattedMessage = encodeURIComponent(formatMessage());
+      window.open(`sms:+254722652491?body=${formattedMessage}`);
+    }
+
+    function sendViaEmail() {
+      const subject = encodeURIComponent(document.getElementById('subject').value);
+      const formattedMessage = encodeURIComponent(formatMessage());
+      window.open(`mailto:deputydg.publichealth@health.go.ke?subject=${subject}&body=${formattedMessage}`);
     }
   </script>
 
