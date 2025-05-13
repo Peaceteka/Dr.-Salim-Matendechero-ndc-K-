@@ -1,3 +1,1 @@
-Hi there, 👊🏿👊🏿
-I'm Peace Teka.
-You must be looking for me. Glad you found me 
+# Dr. Sultani Matendechero's Portfolio\n\nA professional portfolio website showcasing Dr. Sultani Matendechero's work in public health, research, and leadership.
